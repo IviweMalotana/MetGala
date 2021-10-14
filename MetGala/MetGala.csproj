@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\fonts\Allison\Allison-Regular.ttf" />
+    <None Include="wwwroot\css\fonts\Allison\OFL.txt" />
+    <None Include="wwwroot\css\fonts\Amatic_SC\AmaticSC-Bold.ttf" />
+    <None Include="wwwroot\css\fonts\Amatic_SC\AmaticSC-Regular.ttf" />
+    <None Include="wwwroot\css\fonts\Amatic_SC\OFL.txt" />
+    <None Include="wwwroot\css\fonts\Apple Chancery.ttf" />
+    <None Include="wwwroot\css\fonts\Merienda\Merienda-Bold.ttf" />
+    <None Include="wwwroot\css\fonts\Merienda\Merienda-Regular.ttf" />
+    <None Include="wwwroot\css\fonts\Merienda\OFL.txt" />
+    <None Include="wwwroot\css\fonts\Parisienne\OFL.txt" />
+    <None Include="wwwroot\css\fonts\Parisienne\Parisienne-Regular.ttf" />
+    <None Include="wwwroot\css\fonts\Sacramento\OFL.txt" />
+    <None Include="wwwroot\css\fonts\Sacramento\Sacramento-Regular.ttf" />
+    <None Include="wwwroot\css\fonts\sade.jpg" />
+    <None Include="wwwroot\css\fonts\Zapfino\License_E.pdf" />
+    <None Include="wwwroot\css\fonts\Zapfino\Read me.pdf" />
+    <None Include="wwwroot\css\fonts\Zapfino\ZapfinoExtraLT-Alternate.otf" />
+    <None Include="wwwroot\css\fonts\Zapfino\ZapfinoExtraLT-Four.otf" />
+    <None Include="wwwroot\css\fonts\Zapfino\ZapfinoExtraLT-Ligatures.otf" />
+    <None Include="wwwroot\css\fonts\Zapfino\ZapfinoExtraLT-One.otf" />
+    <None Include="wwwroot\css\fonts\Zapfino\ZapfinoExtraLT-Ornaments.otf" />
+    <None Include="wwwroot\css\fonts\Zapfino\ZapfinoExtraLT-SmallCaps.otf" />
+    <None Include="wwwroot\css\fonts\Zapfino\ZapfinoExtraLT-Three.otf" />
+    <None Include="wwwroot\css\fonts\Zapfino\ZapfinoExtraLT-Two.otf" />
+    <None Include="wwwroot\css\fonts\Zapfino\ZapfinoExtraLTPro.otf" />
+    <None Include="wwwroot\css\fonts\Zapfino\ZapfinoForteLT-Alternate.otf" />
+    <None Include="wwwroot\css\fonts\Zapfino\ZapfinoForteLT-One.otf" />
+    <None Include="wwwroot\css\fonts\Zapfino\ZapfinoForteLTPro.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.10" PrivateAssets="all" />
+    <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>
