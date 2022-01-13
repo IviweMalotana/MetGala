@@ -26,13 +26,11 @@
         margin-bottom: 10vh;
     }
 
-    .main-body {
-        height: 60vh;     
+    .form-body {
+        height: 50vh;     
         width: 30%;
         border-radius: 10px;
-        max-width: 800px;
         margin: auto;
-        margin-bottom: 10vh;
         background-color: black;
         align-content: center;
         justify-content: center;
@@ -67,9 +65,7 @@
     .form-group-others {
         width: 80%;
         padding-top: 10%;
-        margin: auto;
-
-        
+        margin: auto;     
     }
 
     .form-group-text-area {
@@ -138,6 +134,11 @@
         color: antiquewhite;
         background-color: black;
     }
+    .powerbi{
+        height: 30vh;
+        width: 100%;
+        background-color: white;
+    }
 
 </style>
 
@@ -145,64 +146,28 @@
     <div class="nav">
         <h1>Met Gala Registration</h1>
     </div>
-    <form class="main-body">
+    <div class="form-body">
 
         <div class="form-group-others">
-            <input type="text" class="form-control form-control-style" placeholder="Name" @bind="met.Name">
+            <input type="text" class="form-control form-control-style" placeholder="Name" @bind="met.Platform">
         </div>
 
-        <div class="form-group-others">
-            <input type="text" class="form-control form-control-style" placeholder="Surname" @bind="met.Surname">
-        </div>
-
-        <div class="form-group-others">
-            <input type="text" class="form-control form-control-style" placeholder="Email" @bind="met.Email">
-        </div>
 
         <div class="form-group-others">
             <select class="custom-select right-input " id="inputGroupSelect01" @onchange="OnDesignerChanged">
-                <option selected>Select Designer</option>
-                <option value="Alexander McQueen">Alexander McQueen</option>
-                <option value="Burberry">Burberry</option>
-                <option value="Balmain">Balmain</option>
-                <option value="Balenciaga">Balenciaga</option>
-                <option value="Chanel">Chanel</option>
-                <option value="Carolina Herrera">Carolina Herrera</option>
-                <option value="Calvin Klein">Calvin Klein</option>
-                <option value="Dior">Dior</option>
-                <option value="Donna Karan">Donna Karan</option>
-                <option value="Dolce & Gabbana">Dolce & Gabbana</option>
-                <option value="Gucci">Gucci</option>
-                <option value="Giambattista Valli">Giambattista Valli</option>
-                <option value="Givenchy">Givenchy</option>
-                <option value="Jean Paul Gaultier">Jean Paul Gaultier</option>
-                <option value="Karl Lagerfeld">Karl Lagerfeld</option>
-                <option value="Louis Vuitton">Louis Vuitton</option>
-                <option value="Mui Mui">Mui Mui</option>
-                <option value="Marchesa">Marchesa</option>
-                <option value="Maison Margiela">Maison Margiela</option>
-                <option value="Marc Jacobs">Marc Jacobs</option>
-                <option value="Oscar de la Renta">Oscar de la Renta</option>
-                <option value="Prada">Prada</option>
-                <option value="Ralph Lauren">Ralph Lauren</option>
-                <option value="Roberto Cavalli">Roberto Cavalli</option>
-                <option value="Ralph & Russo">Ralph & Russo</option>
-                <option value="Stella McCartney">Stella McCartney</option>
-                <option value="Tommy Hilfiger">Tommy Hilfiger</option>
-                <option value="Thierry Mugler">Thierry Mugler</option>
-                <option value="Tom Ford">Tom Ford</option>
-                <option value="Versace">Versace</option>
-                <option value="Valentino">Valentino</option>
-                <option value="Vera Wang">Vera Wang</option>
-                <option value="Yves Saint Laurent">Yves Saint Laurent</option>
-                <option value="Zac Posen">Zac Posen</option>
-                <option value="Zuhair Murad">Zuhair Murad</option>
+                <option selected>Select Platform</option>
+                <option value="Indeed">Indeed</option>
+                <option value="Twitter">Twitter</option>
+                <option value="LinkedIn">LinkedIn</option>
             </select>
         </div>
         <div class="form-group-others">
             <button type="button" @onclick="Done" class="mybutton">Done</button>
         </div>
-    </form>
+    </div>
+    <div class="power-bi">
+        
+    </div>
 
 </div>
 
@@ -210,10 +175,7 @@
 {  
     public class Met
     {
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string Email { get; set; }
-        public string Designer { get; set; }
+        public string Platform { get; set; }
     }
 
     Met met = new Met();
@@ -227,8 +189,8 @@
 
     private Task OnDesignerChanged(ChangeEventArgs e)
     {
-        met.Designer = e.Value.ToString();
-        return ValueChanged.InvokeAsync(met.Designer);
+        met.Platform = e.Value.ToString();
+        return ValueChanged.InvokeAsync(met.Platform);
     }
 
 
@@ -236,7 +198,7 @@
     private async Task Done()
     {
 
-        await HttpClient.PostAsJsonAsync("https://prod-32.westeurope.logic.azure.com:443/workflows/405a24be83724c119bcc0a13e5514b40/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=E_QhzT5uldVVGIJTSDVwPMk2sHFZEocECFH_8u3U21o", met);
+        await HttpClient.PostAsJsonAsync("", met);
     }
 
 }
